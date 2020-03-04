@@ -47,10 +47,10 @@ def user(username):
 @login_required
 def company():
     # params for this will be "roles" roles(flask_login) = company(deedle_groups)
-
+    # user = User.query.all()
     deeds = Deed.query.order_by(Deed.timestamp.desc()).all()
     # set company = to comapny
-    return render_template('group.html', deeds=deeds)
+    return render_template('group.html', deeds=deeds, user=user)
 
 
 @app.route('/login', methods=['GET', 'POST'])

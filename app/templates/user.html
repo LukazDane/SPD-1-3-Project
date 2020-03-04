@@ -43,7 +43,9 @@
 </div>
 <div>
     {% for deed in deeds %}
+    {% if deed.user_id==current_user.id %}
     {% include 'partials/deed.html' %}
+    {% endif %}
     {% endfor %}
 </div>
 
