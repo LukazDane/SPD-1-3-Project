@@ -2,7 +2,15 @@
 <div id="group-container">
   <div id="group-sidebar">
     <div id="group__wrapper-title">
-      <div id="group__title">Company</div>
+      <div id="group__title">{% if current_user.group == 'blue' %}
+        <p>Blue Squares</p>
+        {% endif %} {% if current_user.group == 'red' %}
+        <p>Red Dragons</p>
+        {% endif %} {% if current_user.group == 'green' %}
+        <p>Green Scales</p>
+        {% endif %} {% if current_user.group == 'purple' %}
+        <p>Purple Royals</p>
+        {% endif %}</div>
     </div>
     <div id="group__wrapper-info">
       <div id="group__info">
