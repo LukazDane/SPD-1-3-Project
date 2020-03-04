@@ -1,18 +1,19 @@
 #sidebar {
-  font-size: 5vw;
-  line-height: 3vw;
+  width: 60%;
+  height: 90%;
+  max-width: 300px;
 
-  background-color: white;
-  margin-top: 8%;
+  background-color: var(--nav-backgroud-color);
   padding: 22px;
 
   transition: transform 1s;
   transform: translateY(0%);
   transform: translateX(100%);
-  width: 60%;
-  height: 90%;
-  max-width: 300px;
   pointer-events: all;
+
+  position: absolute;
+  top: 10%;
+  right: 0;
 }
 
 .sidebar button {
@@ -23,27 +24,6 @@
   padding: 0 !important;
   font-size: inherit;
   cursor: pointer;
-}
-
-#sidebar button {
-  text-align: center;
-
-  width: 100%;
-  max-width: 400px;
-  height: 60px;
-  margin-bottom: 5px;
-
-  border-bottom: 1px solid #eaedf0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#sidebar button:active {
-  transform: translateY(1px);
-  filter: saturate(150%);
 }
 
 .is_visible {
@@ -61,14 +41,14 @@
 .sidebar__link {
   color: var(--report-bg-color);
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
 
   width: 100%;
   max-width: 400px;
   padding: 5%;
   margin-bottom: 5px;
 
-  border-bottom: 1px solid #eaedf0;
+  border-bottom: 1px solid var(--main-border-color);
 
   display: flex;
   flex-direction: column;
@@ -114,7 +94,6 @@
     height: auto;
     width: 100%;
     max-width: 100%;
-    margin-top: 17%;
     position: relative;
     left: 0;
   }
